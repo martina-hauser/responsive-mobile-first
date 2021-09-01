@@ -1,0 +1,77 @@
+/* Grundlayout */
+
+body {
+  font-size: 1.5em;
+}
+
+.wrapper {
+  max-width: 60em;
+}
+
+.header {
+  background: yellow;
+  padding: 1em;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  background: red;
+}
+
+.nav {
+  background: cyan;
+  box-sizing: border-box;
+  padding: 1em;
+}
+
+.main {
+  background: limegreen;
+  box-sizing: border-box;
+  padding: 1em;
+}
+
+.sidebar {
+  background: darkcyan;
+  box-sizing: border-box;
+  padding: 1em;
+}
+
+.footer {
+  background: yellow;
+  padding: 1em;
+}
+
+/* Responsive */
+/* Mobile first: larger at-Rules can be ignored by phones */
+@media screen and (min-width: 30em) {
+  .content {
+    flex-direction: row;
+  }
+
+  .nav,
+  .sidebar {
+    width: 20%;
+  }
+
+  .main {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 50em) {
+  .nav,
+  .sidebar {
+    width: 15%;
+  }
+
+  .main {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .wrapper {
+    margin: 0 auto;
+  }
+}
